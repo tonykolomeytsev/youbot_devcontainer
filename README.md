@@ -21,7 +21,7 @@ You can now write scripts for the robot on any computer, with any OS.
 - If you are using Windows 10/11 or Mac OS, install Docker Desktop:
     [https://www.docker.com/get-started/](https://www.docker.com/get-started/)
 
-- If you are using a Linux distribution, I think you know how to install dockerю But anyway, here is an example installation instruction for Ubuntu: [https://docs.docker.com/engine/install/ubuntu/](https://docs.docker.com/engine/install/ubuntu/)
+- If you are using a Linux distribution, I think you know how to install docker. But anyway, here is an example installation instruction for Ubuntu: [https://docs.docker.com/engine/install/ubuntu/](https://docs.docker.com/engine/install/ubuntu/)
 
 ### 2. Pull the youBot-ready Docker image
 
@@ -35,7 +35,24 @@ docker pull tonykolomeytsev/youbot:devcontainer
 
 ### 3. Run Docker container and mount volumes
 
-> TODO
+Most likely, you would like your projects to be stored locally on your computer and not disappear when docker is shut down. Therefore, you need to create a folder for youBot projects in a convenient place, for example:
+- For Windows: `%USERPROFILE%\YouBotProjects`
+- For Mac OS and Linux: `~/YouBotProjects`
+
+And then:
+- For Windows and Mac OS users:
+    1. Run Docker Desktop and fing the `tonykolomeytsev/youbot` image, press `Run` button.
+        ![Docker Desktop Images Tab](https://github.com/tonykolomeytsev/youbot_devcontainer/raw/master/media/screenshot1.png)
+    2. In the dialog that appears, specify a name for the container.
+        ![Docker Desktop Run Container Dialog](https://github.com/tonykolomeytsev/youbot_devcontainer/raw/master/media/screenshot2.png)
+
+- For Linux users:
+    Start the docker container:
+    ```
+    docker run --name youbot -itd -v <youbot_projects_path>:/root/workspace tonykolomeytsev/youbot:devcontainer
+    ```
+
+Option `--name` for the friendly container name. Options `-i`, `-t`, `-d` is for... you wil read in docker `run --help`.  
 
 ### 4. Create your first project
 
