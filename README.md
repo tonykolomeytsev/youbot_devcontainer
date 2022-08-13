@@ -79,8 +79,8 @@ And then:
     
     Options `-i`, `-t`, is for... you wil read in `docker run --help`. Option `-d` to not go inside the container.
 
-    To make sure your container is running, run:
-    
+    To make sure your container is running, run in terminal:
+
     ```bash
     docker ps
     ```
@@ -89,7 +89,24 @@ And then:
 
 Great, after all these manipulations, we have a working container with Ubuntu and installed dependencies for youBot inside.
 
-To create a new project for youBot, which consists of template CMakeLists.txt and src/main.cpp, you need to go inside the container:
+To create a new project for youBot, which consists of template `CMakeLists.txt` and `src/main.cpp`, you need to go inside the container:
+
+```bash
+docker exec -it bash youbot
+```
+
+Inside the container, run the command `youbot_new_project <project_name>` to create a new project.
+
+```bash
+youbot_new_project laba_omr_3
+```
+
+Congratulations, your project is located inside the `/root/workspace/omr_laba_3/` folder. All project files will also be in your `~/YouBotProjects` folder.
+
+> For details run 
+> ```bash
+> cat /usr/local/bin/youbot_new_project
+> ```
 
 ### 5. Build the project and run
 
