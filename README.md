@@ -42,7 +42,7 @@ Most likely, you would like your projects to be stored locally on your computer 
 And then:
 - For Windows and Mac OS users:
     
-    Run Docker Desktop and fing the `tonykolomeytsev/youbot` image, press `Run` button.
+    Run Docker Desktop and find the `tonykolomeytsev/youbot` image, press `Run` button.
     <details>
     <summary>Screenshot</summary>
 
@@ -59,6 +59,15 @@ And then:
     
     </details>
 
+    To make sure your container is running, go to the Containers tab.
+
+    <details>
+    <summary>Screenshot</summary>
+
+    ![Docker Desktop Images Tab](https://github.com/tonykolomeytsev/youbot_devcontainer/raw/master/media/screenshot3.png)
+    
+    </details>
+
 - For Linux users:
 
     Start the docker container:
@@ -70,9 +79,17 @@ And then:
     
     Options `-i`, `-t`, is for... you wil read in `docker run --help`. Option `-d` to not go inside the container.
 
+    To make sure your container is running, run:
+    
+    ```bash
+    docker ps
+    ```
+
 ### 4. Create your first project
 
-> TODO
+Great, after all these manipulations, we have a working container with Ubuntu and installed dependencies for youBot inside.
+
+To create a new project for youBot, which consists of template CMakeLists.txt and src/main.cpp, you need to go inside the container:
 
 ### 5. Build the project and run
 
