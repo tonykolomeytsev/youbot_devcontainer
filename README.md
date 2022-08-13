@@ -122,7 +122,7 @@ Then click on the green button at the bottom left in the VSCode.
     <img src="https://github.com/tonykolomeytsev/youbot_devcontainer/raw/master/media/screenshot5.png">
 </p>
 
-Select `Attach to running container...` option.
+Select `Attach to Running Container...` option.
 
 <p align="center">
     <img src="https://github.com/tonykolomeytsev/youbot_devcontainer/raw/master/media/screenshot6.png">
@@ -146,7 +146,24 @@ Specify the SDK for the project.
     <img src="https://github.com/tonykolomeytsev/youbot_devcontainer/raw/master/media/screenshot9.png">
 </p>
 
+Install C++ Extension Pack inside the container and wait for installation.
+
+<p align="center">
+    <img src="https://github.com/tonykolomeytsev/youbot_devcontainer/raw/master/media/screenshot10.png">
+</p>
+
+Done.
+
 ### 6. Build the project and run
 
-> TODO
+CMake is used to build the project. In the project tree, you should see `CMakeLists.txt` and `main.cpp` with basic initialization code.
 
+<p align="center">
+    <img src="https://github.com/tonykolomeytsev/youbot_devcontainer/raw/master/media/screenshot11.png">
+</p>
+
+Press `F7` to build the project. After a successful build, the `./bin` folder will contain an executable file.
+
+<p align="center">
+    <img src="https://github.com/tonykolomeytsev/youbot_devcontainer/raw/master/media/screenshot12.png">
+</p>
