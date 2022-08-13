@@ -12,7 +12,7 @@ The image based on Ubuntu-20.04 and uses my own a bit modified [fork](https://gi
 
 ## What the heck is that?
 
-You can now write scripts for the robot on any computer, with any OS.
+You can now write scripts for the robot on any computer, with any OS. At the same time, you can enjoy hints, docs and IntelliSense.
 
 ## The simplest way to use
 
@@ -162,8 +162,18 @@ CMake is used to build the project. In the project tree, you should see `CMakeLi
     <img src="https://github.com/tonykolomeytsev/youbot_devcontainer/raw/master/media/screenshot11.png">
 </p>
 
-Press `F7` to build the project. After a successful build, the `./bin` folder will contain an executable file.
+Press `F7` to build the project. Press `Shift` + `F5` to run project without debugging. After a successful build, the `./bin` folder will contain an executable file.
 
 <p align="center">
     <img src="https://github.com/tonykolomeytsev/youbot_devcontainer/raw/master/media/screenshot12.png">
 </p>
+
+## How to reuse
+
+Once you're done with the project, just close VSCode and stop the container in docker (either via the terminal or via Docker Desktop). 
+
+Don't delete the container. When you want to return to it, just start it again and connect to it from VSCode. You only need to configure extensions in VSCode for each container once.
+
+## Project status
+
+The project is in progress and is being developed just for fun. Additional features will be added in the future.
