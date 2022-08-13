@@ -1,4 +1,4 @@
-PROJECT(test)
+PROJECT(youbot_project_name)
 CMAKE_MINIMUM_REQUIRED(VERSION 3.1)
 
 ## enable C++ 11
@@ -26,11 +26,11 @@ INCLUDE_DIRECTORIES(
 )
 
 ## Compile and link
-ADD_EXECUTABLE(test
+ADD_EXECUTABLE(youbot_project_name
   	src/main.cpp
 )
 
-TARGET_LINK_LIBRARIES(test
+TARGET_LINK_LIBRARIES(youbot_project_name
 	YouBotDriver
 	${Boost_LIBRARIES}
 	pthread
