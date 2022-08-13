@@ -14,6 +14,10 @@ The image based on Ubuntu-20.04 and uses my own a bit modified [fork](https://gi
 
 You can now write scripts for the robot on any computer, with any OS. At the same time, you can enjoy hints, docs and IntelliSense.
 
+<p align="center">
+    <img src="https://github.com/tonykolomeytsev/youbot_devcontainer/raw/master/media/demo.gif">
+</p>
+
 ## The simplest way to use
 
 ### 1. Install Docker
