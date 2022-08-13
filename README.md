@@ -108,7 +108,33 @@ Congratulations, your project is located inside the `/root/workspace/omr_laba_3/
 > cat /usr/local/bin/youbot_new_project
 > ```
 
-### 5. Build the project and run
+### 5. Open project in Visual Studio Code
+
+Install [Remote - Containers](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers) plugin in VSCode.
+
+<p align="center">
+    <img src="https://github.com/tonykolomeytsev/youbot_devcontainer/raw/master/media/screenshot4.png">
+</p>
+
+Then click on the green button at the bottom left in the VSCode.
+
+<p align="center">
+    <img src="https://github.com/tonykolomeytsev/youbot_devcontainer/raw/master/media/screenshot5.png">
+</p>
+
+Select `Attach to running container...` option.
+
+<p align="center">
+    <img src="https://github.com/tonykolomeytsev/youbot_devcontainer/raw/master/media/screenshot6.png">
+</p>
+
+And select the container you started earlier.
+
+<p align="center">
+    <img src="https://github.com/tonykolomeytsev/youbot_devcontainer/raw/master/media/screenshot7.png">
+</p>
+
+### 6. Build the project and run
 
 > TODO
 
