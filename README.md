@@ -134,6 +134,18 @@ And select the container you started earlier.
     <img src="https://github.com/tonykolomeytsev/youbot_devcontainer/raw/master/media/screenshot7.png">
 </p>
 
+Wait for VSCode to load, then click `File` -> `Open Folder...` Select the folder with your project.
+
+<p align="center">
+    <img src="https://github.com/tonykolomeytsev/youbot_devcontainer/raw/master/media/screenshot8.png">
+</p>
+
+Specify the SDK for the project.
+
+<p align="center">
+    <img src="https://github.com/tonykolomeytsev/youbot_devcontainer/raw/master/media/screenshot9.png">
+</p>
+
 ### 6. Build the project and run
 
 > TODO
