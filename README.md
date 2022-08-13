@@ -60,12 +60,15 @@ And then:
     </details>
 
 - For Linux users:
+
     Start the docker container:
     ```
     docker run --name youbot -itd -v <youbot_projects_path>:/root/workspace tonykolomeytsev/youbot:devcontainer
     ```
 
-Option `--name` for the friendly container name. Options `-i`, `-t`, is for... you wil read in docker `run --help`. Option `-d` to not go inside the container.
+    WIth option `--name` specify the container name. With option `-v` specify the path to the folder where projects for youbot will be stored and `/root/workspace` for container path. 
+    
+    Options `-i`, `-t`, is for... you wil read in `docker run --help`. Option `-d` to not go inside the container.
 
 ### 4. Create your first project
 
