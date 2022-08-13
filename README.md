@@ -41,10 +41,23 @@ Most likely, you would like your projects to be stored locally on your computer 
 
 And then:
 - For Windows and Mac OS users:
-    1. Run Docker Desktop and fing the `tonykolomeytsev/youbot` image, press `Run` button.
-        ![Docker Desktop Images Tab](https://github.com/tonykolomeytsev/youbot_devcontainer/raw/master/media/screenshot1.png)
-    2. In the dialog that appears, specify a name for the container.
-        ![Docker Desktop Run Container Dialog](https://github.com/tonykolomeytsev/youbot_devcontainer/raw/master/media/screenshot2.png)
+    
+    Run Docker Desktop and fing the `tonykolomeytsev/youbot` image, press `Run` button.
+    <details>
+    <summary>Screenshot</summary>
+
+    ![Docker Desktop Images Tab](https://github.com/tonykolomeytsev/youbot_devcontainer/raw/master/media/screenshot1.png)
+
+    </details>
+
+    In the dialog that appears, specify the `Container name`. In the `Volumes` section, in the `Host path` field, specify the path to the folder where projects for youbot will be stored. In the `Container path` field write `/root/workspace`.
+
+    <details>
+    <summary>Screenshot</summary>
+
+    ![Docker Desktop Images Tab](https://github.com/tonykolomeytsev/youbot_devcontainer/raw/master/media/screenshot2.png)
+    
+    </details>
 
 - For Linux users:
     Start the docker container:
@@ -52,7 +65,7 @@ And then:
     docker run --name youbot -itd -v <youbot_projects_path>:/root/workspace tonykolomeytsev/youbot:devcontainer
     ```
 
-Option `--name` for the friendly container name. Options `-i`, `-t`, `-d` is for... you wil read in docker `run --help`.  
+Option `--name` for the friendly container name. Options `-i`, `-t`, is for... you wil read in docker `run --help`. Option `-d` to not go inside the container.
 
 ### 4. Create your first project
 
