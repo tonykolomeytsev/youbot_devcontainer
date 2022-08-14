@@ -1,15 +1,22 @@
 #!/bin/bash
 
 if [ "$#" -ne 1 ]; then
-    echo "Error: Illegal number of arguments"
+    echo "Illegal number of arguments. One argument with the project name is required."
     exit 0
 fi
 
 if [ -z "$1" ]; then
-    echo "Error: Project name must not be empty string"
+    echo "Project name must not be empty string."
+    exit 0
 fi
 
 PRJ_FILENAME="/root/workspace/$1"
+
+if [[ -d "$PRJ_FILENAME" ] && [ -f "$PRJ_FILENAME/CMakeLists.txt" ]]; then
+    echo "Project with name $1 already exists."
+    exit 0
+fi
+
 mkdir -p $PRJ_FILENAME/src
 cp /root/.template/CMakeLists.txt $PRJ_FILENAME/CMakeLists.txt
 cp /root/.template/main.cpp $PRJ_FILENAME/src/main.cpp
