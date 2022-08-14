@@ -178,6 +178,10 @@ Once you're done with the project, just close VSCode and stop the container in d
 
 Don't delete the container. When you want to return to it, just start it again and connect to it from VSCode. You only need to configure extensions in VSCode for each container once.
 
+## Limitations
+
+Docker containers require a lot of RAM :(
+
 ## Project status
 
 The project is in progress and is being developed just for fun. Additional features will be added in the future.
