@@ -150,7 +150,7 @@ Specify the SDK for the project.
     <img src="https://github.com/tonykolomeytsev/youbot_devcontainer/raw/master/media/screenshot9.png">
 </p>
 
-Install C++ Extension Pack inside the container and wait for installation.
+Install `C++ Extension Pack` and `CMake Tools` VSCode extensions inside the container and wait for installation.
 
 <p align="center">
     <img src="https://github.com/tonykolomeytsev/youbot_devcontainer/raw/master/media/screenshot10.png">
