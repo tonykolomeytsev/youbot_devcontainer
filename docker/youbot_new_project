@@ -1,25 +1,44 @@
 #!/bin/bash
 
+RED="\e[31m"
+GREEN="\e[32m"
+YELLOW="\e[33m"
+RST="\e[0m"
+
+# Check number of arguments
 if [ "$#" -ne 1 ]; then
-    echo "Illegal number of arguments. One argument with the project name is required."
+    echo -e "${RED}Illegal number of arguments. One argument with the project name is required.${RST}"
     exit 0
 fi
 
-if [ -z "$1" ]; then
-    echo "Project name must not be empty string."
+# Check argument is a valid project name
+if [[ ! "$1" =~ ^[a-zA-Z_][a-zA-Z0-9_]*$ ]]; then
+    echo -e "${RED}Invalid project name '$1'"
+    echo "The project name must consist of uppercase and lowercase Latin letters, numbers and underscores" 
+    echo -e "The name must not start with a number ${RST}"
     exit 0
 fi
 
 PRJ_FILENAME="/root/workspace/$1"
 
-if [[ -d "$PRJ_FILENAME" ] && [ -f "$PRJ_FILENAME/CMakeLists.txt" ]]; then
-    echo "Project with name $1 already exists."
+# Check project dir already contains a files so as not to overwrite them
+if [ -f "$PRJ_FILENAME/CMakeLists.txt" ] || [ -f "$PRJ_FILENAME/src/main.cpp" ]; then
+    echo -e "${RED}Project with name '$1' already exists ${RST}"
     exit 0
+fi
+
+# Notify user about some files other in project dir
+if [ -d "$PRJ_FILENAME" ]; then
+    if [ "$(ls -A $PRJ_FILENAME)" ]; then
+        echo -e "${YELLOW}Directory '$PRJ_FILENAME' already contains some files ${RST}"
+	fi
 fi
 
 mkdir -p $PRJ_FILENAME/src
 cp /root/.template/CMakeLists.txt $PRJ_FILENAME/CMakeLists.txt
-cp /root/.template/main.cpp $PRJ_FILENAME/src/main.cpp
 sed -i "s/youbot_project_name/$1/g" $PRJ_FILENAME/CMakeLists.txt
+echo "Created $PRJ_FILENAME/CMakeLists.txt"
+cp /root/.template/main.cpp $PRJ_FILENAME/src/main.cpp
+echo "Created $PRJ_FILENAME/src/main.cpp"
 
-echo "Project with name '$1' successfully created at $PRJ_FILENAME"
+echo -e "${GREEN}Project with name '$1' successfully created at $PRJ_FILENAME ${RST}"
